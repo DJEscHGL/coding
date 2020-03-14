@@ -1,3 +1,3 @@
 ﻿  K23.cpp
-D:\Programming\C++\BSU\K23\K23\K23.cpp(24,12): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  K23.vcxproj -> D:\Programming\C++\BSU\K23\Debug\K23.exe
+D:\Programing\proglabs\1 course\K23\K23\K23.cpp(24,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  K23.vcxproj -> D:\Programing\proglabs\1 course\K23\Debug\K23.exe

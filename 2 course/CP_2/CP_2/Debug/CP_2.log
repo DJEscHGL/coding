@@ -1,0 +1,3 @@
+﻿  CP_2.cpp
+D:\Programing\proglabs\2 course\CP_2\CP_2\CP_2.cpp(86,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  CP_2.vcxproj -> D:\Programing\proglabs\2 course\CP_2\Debug\CP_2.exe

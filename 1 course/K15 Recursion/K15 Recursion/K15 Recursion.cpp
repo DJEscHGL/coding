@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int s;
+int s = 0;
 
 void recursia(int q)
 {
