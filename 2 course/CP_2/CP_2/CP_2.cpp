@@ -53,10 +53,11 @@ public:
 	}
 	void SelectionSort()
 	{
+		int q = 0;
 		int min;
-		for (int i = 0; i < n; i++)
+		for (double *i = dist; i < dist + n; i++, q++)
 		{
-			*(dist + i) = sqrt((*(x + i)) * (*(x + i)) + (*(y + i)) * (*(y + i)));
+			*(i) = sqrt((*(x + q)) * (*(x + q)) + (*(y + q)) * (*(y + q)));
 		}
 		for (int i = 0; i < n - 1; i++)
 		{
@@ -82,7 +83,7 @@ public:
 	}
 };
 
-void main()
+int main()
 {
 	int Size;
 	cout << "Size = ";

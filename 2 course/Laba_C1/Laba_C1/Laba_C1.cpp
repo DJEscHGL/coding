@@ -74,7 +74,7 @@ void Multiplication(double* Arr1[], double* Arr2[], double* Mult[], int SIZE)
                     else
                     {
                         a = Arr1[k][i];
-                            Mult[i][j] += a * Arr2[k][j];
+                        Mult[i][j] += a * Arr2[k][j];
                     }
                 }
                 else
