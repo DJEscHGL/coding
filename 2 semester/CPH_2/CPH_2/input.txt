@@ -1,0 +1,21 @@
+par
+#include <iostream>
+#include <stack> // par
+#include <Windows.h>
+// par
+using namespace std;
+/*
+par
+*/
+int main()
+{
+	while(par != sum) /* as */
+		c++;
+	/**/while(par != sum)
+	{
+	/* par */
+		par++; // me
+		sum++;
+		que = par + sum;
+	}
+}
