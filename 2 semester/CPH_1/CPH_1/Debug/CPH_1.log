@@ -1,3 +1,3 @@
 ﻿  CPH_1.cpp
-D:\Programing\proglabs\2 course\CPH_1\CPH_1\CPH_1.cpp(76,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
-  CPH_1.vcxproj -> D:\Programing\proglabs\2 course\CPH_1\Debug\CPH_1.exe
+D:\Programing\proglabs\2 semester\CPH_1\CPH_1\CPH_1.cpp(77,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+  CPH_1.vcxproj -> D:\Programing\proglabs\2 semester\CPH_1\Debug\CPH_1.exe
