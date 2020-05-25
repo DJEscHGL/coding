@@ -1,4 +1,4 @@
-par
+sum
 #include <iostream>
 #include <stack> // par
 #include <Windows.h>
