@@ -1,3 +1,0 @@
-﻿  K22.cpp
-D:\Programming\C++\BSU\K22\K22\K22.cpp(9,12): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  K22.vcxproj -> D:\Programming\C++\BSU\K22\Debug\K22.exe

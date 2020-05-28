@@ -1,3 +1,0 @@
-﻿  K4.cpp
-D:\Programming\C++\BSU\K4\K4\K4.cpp(11,12): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  K4.vcxproj -> D:\Programming\C++\BSU\K4\Debug\K4.exe

@@ -1,4 +1,0 @@
-﻿  lab1.cpp
-D:\Programming\C++\BSU\lab1\lab1\lab1.cpp(15,12): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-D:\Programming\C++\BSU\lab1\lab1\lab1.cpp(9,6): warning C4101:  count: неиспользованная локальная переменная
-  lab1.vcxproj -> D:\Programming\C++\BSU\lab1\Debug\lab1.exe

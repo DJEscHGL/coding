@@ -1,3 +1,0 @@
-﻿  page33num12.cpp
-D:\Programing\proglabs\2 course\page33num12\page33num12\page33num12.cpp(59,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  page33num12.vcxproj -> D:\Programing\proglabs\2 course\page33num12\Debug\page33num12.exe

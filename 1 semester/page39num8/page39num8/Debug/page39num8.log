@@ -1,3 +1,0 @@
-﻿  page39num8.cpp
-D:\Programming\C++\BSU\page39num8\page39num8\page39num8.cpp(10,12): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  page39num8.vcxproj -> D:\Programming\C++\BSU\page39num8\Debug\page39num8.exe
