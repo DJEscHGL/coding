@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/pic">
+        <file>pic/icon.svg</file>
+        <file>pic/trash.svg</file>
+        <file>pic/about.svg</file>
+        <file>pic/extended.svg</file>
+        <file>pic/clear.svg</file>
+    </qresource>
+</RCC>
