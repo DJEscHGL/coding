@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int n = 5;
+const int n = 5; // тут менять количество оценок
 
 struct node {
 	int marks[n];
@@ -32,25 +32,27 @@ public:
 		Head = temp;
 	}
 	void Output() {
-		node* temp = Head;
 		cout << num;
 	}
 	void Count() {
 		bool flag = false;
 		node* temp = new node;
-		for (int i = 0; i < n; i++) {
-			if (temp->marks[i] < 8) {
-				flag = false;
-				break;
+		temp = Head;
+		while (temp != NULL) {
+			for (int i = 0; i < n; i++) {
+				if (temp->marks[i] < 8) { // тут менять положительные оценки(тут 8, значит оценки 8 9 10 являются оценками отличника)
+					flag = false;
+					break;
+				}
+				else {
+					flag = true;
+				}
 			}
-			else {
-				flag = true;
-			}
+			if (flag)
+				num++;
+			temp = temp->Next;
+			flag = false;
 		}
-		if (flag)
-			num++;
-		temp->Next = Head;
-		Head = temp;
 	}
 };
 
@@ -63,9 +65,7 @@ int main() {
 		cout << i + 1 << " student marks: ";
 		lst.Input();
 	}
-	for (int i = 0; i < N; i++) {
-		lst.Count();
-	}
+	lst.Count();
 	lst.Output();
 	lst.~List();
 }

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="page47num3.cpp">
+    <ClCompile Include="PR_L1_N9.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

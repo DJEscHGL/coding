@@ -1,0 +1,9 @@
+For Programming
+PR_№_A#
+
+For Counting Practice
+CP_№_A#
+
+№ - number of lab
+A, B.. - level
+# - number of task
