@@ -21,10 +21,21 @@ public:
 		}
 	}
 	void Input(int variable) {
-		node* temp = new node;
+		/*node* temp = new node;
 		temp->element = variable;
 		temp->Next = Head;
-		Head = temp;
+		Head = temp;*/
+		node* temp = new node;
+		temp->element = variable;
+		if (Head != NULL) {
+			Head->Next = temp;
+			Head = temp;
+			temp->Next = NULL;
+		}
+		else {
+			temp->Next = NULL;
+			Head = temp;
+		}
 	}
 	void Output() {
 		node* temp = Head;
@@ -68,7 +79,7 @@ int main() {
 		cin >> x;
 		lst.Input(x);
 	}
-	lst.removeDuplicates();
+	//lst.removeDuplicates();
 	lst.Output();
 	lst.~List();
 }

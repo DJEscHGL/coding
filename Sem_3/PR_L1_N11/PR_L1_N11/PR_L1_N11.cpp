@@ -3,7 +3,6 @@
 #include <Windows.h>
 #include <fstream>
 #include <locale>
-#include <Hea>
 
 using namespace std;
 ifstream input("input.txt");
