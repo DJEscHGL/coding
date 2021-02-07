@@ -1,7 +1,11 @@
 ﻿#include <iostream>
 #include <Windows.h>
+#include <fstream>
+#include <locale>
 
 using namespace std;
+ifstream input("input.txt");
+ofstream output("output.txt");
 
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -43,6 +47,7 @@ public:
 		node* temp = Head;
 		while (temp != NULL) {
 			SetConsoleTextAttribute(hConsole, q);
+			output << temp->element << " ";
 			cout << temp->element << " ";
 			temp = temp->next;
 			if (q == 5)
@@ -71,31 +76,54 @@ public:
 };
 
 int main() {
-	setlocale(0, "");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	try {
+		if (!input.is_open())
+			throw true;
+		else
+			throw false;
+	}
+	catch (bool che) {
+		if (che)
+			input.open("input.txt");
+		else
+			cout << "Файл input.txt открыт" << endl;
+	}
+	try {
+		if (!output.is_open())
+			throw true;
+		else
+			throw false;
+	}
+	catch (bool che) {
+		if (che)
+			input.open("output.txt");
+		else
+			cout << "Файл output.txt открыт" << endl;
+	}
 	List list1, list2;
 	int n;
 	double variable;
-	cout << "Количество элементов списка: ";
-	cin >> n;
+	//cout << "Количество элементов списка: ";
+	input >> n;
 	for (int i = 0; i < n; i++) {
-		cout << "Element[" << i + 1 << "] = ";
-		cin >> variable;
+		//cout << "Element[" << i + 1 << "] = ";
+		input >> variable;
 		list1.SetElement(variable);
 	}
 	for (int i = 0; i < n; i++) {
 		list2.SetElement(list1.GetHeadElement(i));
 		list2.SetElement(list1.GetTailElement(i));
 	}
+	output << endl;
 	cout << endl;
 	list2.Output();
 	cout << endl;
+	output << endl;
 	list1.Output();
 	cout << endl;
-	for (int i = 0; i < n; i++) {
-		cout << list1.GetHeadElement(i) << " ";
-	}
-	cout << endl;
-	for (int i = 0; i < n; i++) {
-		cout << list1.GetTailElement(i) << " ";
-	}
+	output << endl;
+	input.close();
+	output.close();
 }

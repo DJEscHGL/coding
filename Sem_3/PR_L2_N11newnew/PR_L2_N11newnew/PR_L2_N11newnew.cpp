@@ -1,10 +1,14 @@
 ﻿#include <iostream>
 #include <Windows.h>
+#include <fstream>
+#include <locale>
 #include <time.h>
 
 using namespace std;
 
 int** buff;
+ifstream input("input.txt");
+ofstream output("output.txt");
 
 class Matrix {
 public:
@@ -12,10 +16,10 @@ public:
 	int** matr, ** minor;
 	//Конструктор
 	Matrix() {
-		cout << "Размерность матрицы:\nn = ";
-		cin >> n;
-		cout << "m = ";
-		cin >> m;
+		//cout << "Размерность матрицы:\nn = ";
+		input >> n;
+		//cout << "m = ";
+		input >> m;
 		matr = new int* [n];
 		for (int i = 0; i < n; i++)
 			matr[i] = new int[m];
@@ -24,17 +28,17 @@ public:
 				matr[i][j] = rand() % 100;
 			}
 		}
-		cout << "Порядок миноров:";
-		cin >> p;
+		//cout << "Порядок миноров:";
+		input >> p;
 		buff = new int* [2];
 		for (int i = 0; i < 2; i++)
 			buff[i] = new int[p];
-		cout << "Номера столбцов\n";
+		//cout << "Номера столбцов\n";
 		for (int i = 0; i < p; i++)
-			cin >> buff[0][i];
-		cout << "Номера строк\n";
+			input >> buff[0][i];
+		//cout << "Номера строк\n";
 		for (int i = 0; i < p; i++)
-			cin >> buff[1][i];
+			input >> buff[1][i];
 		minor = new int* [p];
 		for (int i = 0; i < p; i++)
 			minor[i] = new int[p];
@@ -111,37 +115,49 @@ public:
 	//Вывод матрицы и минора
 	void Output() {
 		cout << "Матрица\n";
+		output << "Матрица\n";
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				cout << matr[i][j] << "\t";
+				output << matr[i][j] << "\t";
 			}
 			cout << endl;
+			output << endl;
 		}
+		output << "Минор\n";
 		cout << "Минор\n";
 		for (int i = 0; i < p; i++) {
 			for (int j = 0; j < p; j++) {
+				output << minor[i][j] << "\t";
 				cout << minor[i][j] << "\t";
 			}
+			output << endl;
 			cout << endl;
 		}
 	}
 	//Вывод Матриы
 	void OutMatr() {
 		cout << "Матрица\n";
+		output << "Матрица\n";
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
 				cout << matr[i][j] << "\t";
+				output << matr[i][j] << "\t";
 			}
 			cout << endl;
+			output << endl;
 		}
 	}
 	//Вывод Минора
 	void OutMin() {
+		output << "Минор\n";
 		cout << "Минор\n";
 		for (int i = 0; i < p; i++) {
 			for (int j = 0; j < p; j++) {
+				output << minor[i][j] << "\t";
 				cout << minor[i][j] << "\t";
 			}
+			output << endl;
 			cout << endl;
 		}
 	}
@@ -205,21 +221,47 @@ void Task(Matrix* obj) {
 			obj[m].ChangeMinor(neww, i, j);
 		}
 	}
+	output << "Новый минор данной матрицы:\n";
 	cout << "Новый минор данной матрицы:\n";
 	obj[m].OutMin();
 }
 
 int main() {
-	setlocale(0, "");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 	srand((unsigned int)time(NULL));
 	int k;
-	cout << "Введите количество матриц: ";
-	cin >> k;
+	//cout << "Введите количество матриц: ";
+	input >> k;
 	Matrix* obj = new Matrix[k];
 	Matrix copyOf1(obj[0]);
 	Matrix result(obj[0], true);
 	bool flag = true;
 	bool flag1 = true;
+	try {
+		if (!input.is_open())
+			throw true;
+		else
+			throw false;
+	}
+	catch (bool che) {
+		if (che)
+			input.open("input.txt");
+		else
+			cout << "Файл input.txt открыт" << endl;
+	}
+	try {
+		if (!output.is_open())
+			throw true;
+		else
+			throw false;
+	}
+	catch (bool che) {
+		if (che)
+			input.open("output.txt");
+		else
+			cout << "Файл output.txt открыт" << endl;
+	}
 	//Меню
 	while (flag) {
 		system("cls");
@@ -233,6 +275,7 @@ int main() {
 		case 1:
 			system("cls");
 			for (int i = 0; i < k; i++) {
+				output << "/////////////////////////////\n";
 				cout << "/////////////////////////////\n";
 				obj[i].Output();
 			}
@@ -253,6 +296,7 @@ int main() {
 					result = obj[0] + copyOf1;
 					copyOf1.OutMatr();
 					copyOf1.OutMin();
+					output << "Результат:\n";
 					cout << "Результат:\n";
 					result.OutMin();
 					system("pause");
@@ -262,6 +306,7 @@ int main() {
 					result = obj[0] - copyOf1;
 					copyOf1.OutMatr();
 					copyOf1.OutMin();
+					output << "Результат:\n";
 					cout << "Результат:\n";
 					result.OutMin();
 					system("pause");
@@ -271,6 +316,7 @@ int main() {
 					result = obj[0] * copyOf1;
 					copyOf1.OutMatr();
 					copyOf1.OutMin();
+					output << "Результат:\n";
 					cout << "Результат:\n";
 					result.OutMin();
 					system("pause");
@@ -290,4 +336,6 @@ int main() {
 			break;
 		}
 	}
+	input.close();
+	output.close();
 }
