@@ -1,59 +1,79 @@
 package com.djesc;
 
+/**
+ * Line
+ */
 public class Line {
-    double x1, x2, y1, y2, k;
+    /**
+     * Коэффициенты уравнения прямой
+     */
+    double a, b, c;
 
+    /**
+     * Конструктор
+     */
     public Line(){
         super();
     }
 
-    public void setX1(double x1) {
-        this.x1 = x1;
+    /**
+     * Сеттер А
+     * @param a а
+     */
+    public void setA(double a) {
+        this.a = a;
     }
 
-    public void setX2(double x2) {
-        this.x2 = x2;
+    /**
+     * Сеттер Б
+     * @param b б
+     */
+    public void setB(double b) {
+        this.b = b;
     }
 
-    public void setY1(double y1) {
-        this.y1 = y1;
+    /**
+     * Сеттер С
+     * @param c с
+     */
+    public void setC(double c) {
+        this.c = c;
     }
 
-    public void setY2(double y2) {
-        this.y2 = y2;
+    /**
+     * Геттер А
+     * @return а
+     */
+    public double getA() {
+        return a;
     }
 
-    public void setK(double k) {
-        this.k = k;
+    /**
+     * Геттер б
+     * @return б
+     */
+    public double getB() {
+        return b;
     }
 
-    public double getX1() {
-        return x1;
+    /**
+     * Геттер С
+     * @return с
+     */
+    public double getC() {
+        return c;
     }
 
-    public double getX2() {
-        return x2;
-    }
-
-    public double getY1() {
-        return y1;
-    }
-
-    public double getY2() {
-        return y2;
-    }
-
-    public double getK() {
-        return k;
-    }
-
+    /**
+     * Вывод параметров обьекта
+     * @return параметры обьекта
+     */
     @Override
     public String toString(){
         return "Line{"
-                + "x1=" + x1
-                + ", x2=" + x2
-                + ", y1=" + y1
-                + ", y2=" + y2
-                + "}";
+                + a + "x "
+                + b + "y "
+                + c + " = 0" +
+                "}";
     }
 }

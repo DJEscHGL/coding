@@ -2,16 +2,32 @@ package com.djesc;
 
 import java.util.Scanner;
 
+/**
+ * Основной класс
+ */
 public class Main {
+    /**
+     * Массив обьектов
+     */
     public static Train[] trains;
+    /**
+     * Количество обьектов
+     */
     public static int n;
 
+    /**
+     * Вывод всех обьектов
+     */
     public static void Out(){
         for(int i = 0; i < n; i++){
             System.out.println(trains[i].toString());
         }
     }
 
+    /**
+     * Первое пункт меню
+     * @param in сканнер
+     */
     public static void case1(Scanner in){
         String destination;
         System.out.print("Введите пункт назначения: ");
@@ -23,6 +39,10 @@ public class Main {
         }
     }
 
+    /**
+     * Второй пункт меню
+     * @param in сканнер
+     */
     public static void case2(Scanner in){
         String destination;
         int time;
@@ -38,9 +58,12 @@ public class Main {
         }
     }
 
+    /**
+     * Третий пункт меню
+     * @param in сканнер
+     */
     public static void case3(Scanner in){
         String destination;
-        int common;
         System.out.print("Введите пункт назначения: ");
         destination = in.next();
         for(int i = 0; i < n; i++){
@@ -51,6 +74,10 @@ public class Main {
         }
     }
 
+    /**
+     * Меню
+     * @param args параметры строки
+     */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Количество поездов: ");
@@ -75,12 +102,6 @@ public class Main {
         }
         System.out.println();
         Out();
-        /*for(int i = 0; i < n; i++){
-            System.out.println(trains[i].getNum() + " " + trains[i].getDestination() + " " + trains[i].getTime() + " "
-                    + trains[i].getN_common() + " " + trains[i].getN_compartment() + " " + trains[i].getN_reserved() +
-                    " " + trains[i].getN_lux());
-        }*/
-
         boolean flag = true;
         int choice;
         while(flag){
