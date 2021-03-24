@@ -1,0 +1,45 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int k[1000][1000], m, n, i, u, l, o, s, b;
+
+int main()
+{
+    o = 0;
+    l = 0;
+    s = 0;
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    cin >> n >> m;
+    for(i = 0; i != n; i++)
+    {
+        for(u = 0; u != m; u++)
+            cin >> k[i][u];
+    }
+    for(i = 1; i != n; i++)
+    {
+        for(u = 1; u != m; u++)
+        {
+            if(k[i][u] != 1)
+                u++;
+            else
+                o++;
+            if(k[i][u + 1] == 0 && k[i][u] == 1)
+            {
+                i = b;
+                while (k[b][u] == 1)
+                {
+                    b++;
+                    s++;
+                }
+                if(o == s)
+                    l++;
+                u += o;
+            }
+        }
+    }
+    cout << l;
+    return 0;
+}

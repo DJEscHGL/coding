@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1540024544 source:d:\secret 22\11 класс\017\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<cstdlib>
+

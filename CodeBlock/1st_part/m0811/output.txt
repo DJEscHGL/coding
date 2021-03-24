@@ -1,0 +1,2 @@
+7 -- prostoi palindrom v dannom rady;  
+11 -- prostoi palindrom v dannom rady;  

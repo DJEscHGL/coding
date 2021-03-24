@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1510222086 source:d:\secret 22\111111\main.cpp
+	<iostream>
+	<string>
+
+1541667984 source:d:\secret 22\10 класс\111111\main.cpp
+	<iostream>
+	<string>
+	<cmath>
+

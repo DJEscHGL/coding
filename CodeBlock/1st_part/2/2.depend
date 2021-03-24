@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1509185232 source:d:\secret 22\2\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<stdlib.h>
+	<stdio.h>
+

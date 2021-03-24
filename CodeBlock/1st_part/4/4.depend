@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1509383107 source:c:\users\djesc\desktop\Ñ++\4\main.cpp
+	<iostream>
+	<fstream>
+	<math.h>
+	<cmath>
+
