@@ -11,15 +11,17 @@ public class Quadrilateral {
     /**
      * Площадь
      */
-    double square;
+    double area = 0;
     /**
      * Периметр
      */
-    double perimeter;
+    double perimeter = 0;
     /**
      * Тип четырёхугольника
      */
-    int type; // 1 - квадрат, 2 - прямоугольник, 3 - ромб, 4 - произвольный
+    int type;// 1 - квадрат, 2 - прямоугольник, 3 - ромб, 4 - произвольный
+
+    int i;
 
     /**
      * Конструктор
@@ -40,10 +42,10 @@ public class Quadrilateral {
 
     /**
      * Сеттер площади
-     * @param square площадь
+     * @param area площадь
      */
-    public void setSquare(double square) {
-        this.square = square;
+    public void setArea(double area) {
+        this.area = area;
     }
 
     /**
@@ -66,8 +68,8 @@ public class Quadrilateral {
      * Геттер площади
      * @return площадь
      */
-    public double getSquare() {
-        return square;
+    public double getArea() {
+        return area;
     }
 
     /**
@@ -76,5 +78,14 @@ public class Quadrilateral {
      */
     public int getType() {
         return type;
+    }
+
+    @Override
+    public String toString(){
+        return "Quadrilateral " + i + " { "
+                + "type=" + type
+                + "; area=" + area
+                + "; perimeter=" + perimeter
+                + "; }";
     }
 }
