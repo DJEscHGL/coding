@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e66aac36-4c9f-4022-9456-a9f55f1a24a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/djesc/QuadrilateralTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PR_L4_1real_N10/PR_L4_1real_N10.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PR_L4_1real_N10/src/com/djesc/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PR_L4_1real_N10/src/com/djesc/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PR_L4_1real_N10/src/com/djesc/Puppy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PR_L4_2_N10/src/com/djesc/BusinessCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PR_L4_2_N10/src/com/djesc/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PR_L4_2_N10/src/com/djesc/CheapCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PR_L4_2_N10/src/com/djesc/ComfortCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PR_L4_2_N10/src/com/djesc/TaxiStation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PR_L7_N3/src/com/djesc/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PR_L3_3_N10/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PR_L4_1_N10.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PR_L4_1_N10.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/djesc/Main.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1qvKC60fmUcF9A7bJoS0cstlTVr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jcommander.jar" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="TestNG.QuadrilateralTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.djesc.Main" />
+      <module name="PR_L4_1_N10" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimalTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PR_L4_1_N10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.djesc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.djesc" />
+      <option name="MAIN_CLASS_NAME" value="test.djesc.AnimalTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnimalTest.equalsPositive" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PR_L4_1_N10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.djesc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.djesc" />
+      <option name="MAIN_CLASS_NAME" value="test.djesc.AnimalTest" />
+      <option name="METHOD_NAME" value="equalsPositive" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuadrilateralTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="PR_L4_1_N10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.djesc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.djesc" />
+      <option name="MAIN_CLASS_NAME" value="test.djesc.QuadrilateralTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="test.djesc" type="TestNG" temporary="true" nameIsGenerated="true">
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.djesc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="test.djesc" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="TestNG.test.djesc" />
+      <item itemvalue="TestNG.AnimalTest.equalsPositive" />
+      <item itemvalue="TestNG.AnimalTest" />
+      <item itemvalue="TestNG.QuadrilateralTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.QuadrilateralTest" />
+        <item itemvalue="TestNG.AnimalTest" />
+        <item itemvalue="TestNG.AnimalTest.equalsPositive" />
+        <item itemvalue="TestNG.test.djesc" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e66aac36-4c9f-4022-9456-a9f55f1a24a1" name="Default Changelist" comment="" />
+      <created>1617954495067</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617954495067</updated>
+      <workItem from="1617954499249" duration="5674000" />
+      <workItem from="1618399639982" duration="6345000" />
+      <workItem from="1618422824395" duration="25000" />
+      <workItem from="1618469953690" duration="495000" />
+      <workItem from="1618470887976" duration="2336000" />
+      <workItem from="1618473261896" duration="9000" />
+      <workItem from="1618826644807" duration="864000" />
+      <workItem from="1619427227232" duration="6000" />
+      <workItem from="1619614233019" duration="606000" />
+      <workItem from="1619640910821" duration="5000" />
+      <workItem from="1619640939732" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
