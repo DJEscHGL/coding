@@ -1,0 +1,15 @@
+false
+-1028653816
+31
+Animal{name='Bulldozer'}
+Animal{name='null'}
+Bulldozer
+Bite
+Gav
+Jump
+Run
+null
+Bite
+Gav
+Jump
+Run
