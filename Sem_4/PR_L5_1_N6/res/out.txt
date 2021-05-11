@@ -1,0 +1,2 @@
+3
+StarSystem{planets=[Planet{moon=Moon{dimension=452}, name='null'}, Planet{moon=Moon{dimension=1664}, name='null'}, Planet{moon=Moon{dimension=9946}, name='null'}, null, null, null, null, null, null, null], sizePlanet=3, star=null}

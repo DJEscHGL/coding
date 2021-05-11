@@ -134,30 +134,42 @@ public class Main {
 
         try {
             num = in.nextInt();
+            if(num < 1)
+                throw new NotPositiveNum("Размерность массива дожна быть не отрицательной");
+            station.setNumBusiness(num);
             station.setNumCheap(num);
         } catch (InputMismatchException e){
             System.out.println(Color.RED + "Тип вводимого числа должен быть " + Color.CYAN_BOLD + "INT" + Color.RESET);
         } catch (NoSuchElementException e){
-            System.out.println(Color.RED + "Отсутствует значение в файле"+ Color.RESET);
+            System.out.println(Color.RED + "Отсутствует значение в файле" + Color.RESET);
+        } catch (NotPositiveNum e){
+            System.out.println(Color.RED + e.message + Color.RESET);
         }
         try {
             num = in.nextInt();
+            if(num < 1)
+                throw new NotPositiveNum("Размерность массива дожна быть не отрицательной");
+            station.setNumBusiness(num);
             station.setNumComfort(num);
         } catch (InputMismatchException e){
             System.out.println(Color.RED + "Тип вводимого числа должен быть " + Color.CYAN_BOLD + "INT" + Color.RESET);
         } catch (NoSuchElementException e){
-            System.out.println(Color.RED + "Отсутствует значение в файле"+ Color.RESET);
+            System.out.println(Color.RED + "Отсутствует значение в файле" + Color.RESET);
+        } catch (NotPositiveNum e){
+            System.out.println(Color.RED + e.message + Color.RESET);
         }
         try {
             num = in.nextInt();
+            if(num < 1)
+                throw new NotPositiveNum("Размерность массива дожна быть не отрицательной");
             station.setNumBusiness(num);
         } catch (InputMismatchException e){
             System.out.println(Color.RED + "Тип вводимого числа должен быть " + Color.CYAN_BOLD + "INT" + Color.RESET);
         } catch (NoSuchElementException e){
-            System.out.println(Color.RED + "Отсутствует значение в файле"+ Color.RESET);
+            System.out.println(Color.RED + "Отсутствует значение в файле" + Color.RESET);
+        } catch (NotPositiveNum e){
+            System.out.println(Color.RED + e.message + Color.RESET);
         }
-        station.createPark();
-
         boolean flag = true;
         int choice;
         while(flag){

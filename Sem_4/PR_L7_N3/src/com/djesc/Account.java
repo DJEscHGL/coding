@@ -7,11 +7,15 @@ public class Account {
         super();
     }
     public static class Operations{
-        String data, currency;
+        String data, currency, type;
         double value;
 
         Operations(){
             super();
+        }
+
+        public void setType(String type) {
+            this.type = type;
         }
 
         public void setCurrency(String currency) {
@@ -36,6 +40,10 @@ public class Account {
 
         public String getData() {
             return data;
+        }
+
+        public String getType() {
+            return type;
         }
     }
 
