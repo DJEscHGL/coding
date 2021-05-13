@@ -2,52 +2,59 @@ package com.djesc;
 
 import java.util.Scanner;
 
+import static com.djesc.WriteObject.write;
+import static com.djesc.ReadObject.read;
+import static com.djesc.ReadObject.station;
+
 public class Main {
     static Scanner in = new Scanner(System.in);
-    static TaxiStation station = new TaxiStation();
     static int fullPrice = 0;
 
+
     static void countPrice(){
-        for(int i = 0; i < station.numCheap; i++){
-            fullPrice += station.cheapCars[i].getPrice();
+        for(CheapCar car : station.getCheapCars()){
+            fullPrice += car.getPrice();
         }
-        for(int i = 0; i < station.numComfort; i++){
-            fullPrice += station.comfortCars[i].getPrice();
+        for(ComfortCar car : station.getComfortCars()){
+            fullPrice += car.getPrice();
         }
-        for(int i = 0; i < station.numBusiness; i++){
-            fullPrice += station.businessCars[i].getPrice();
+        for(BusinessCar car : station.getBusinessCars()){
+            fullPrice += car.getPrice();
         }
         System.out.println("Цена автопарка: " + fullPrice);
     }
 
     static void parkSort(){
-        for(int i = 0; i < station.numCheap - 1; i++){
-            for (int j = 0; j < station.numCheap - i - 1; j++){
-                if(station.cheapCars[j].getFuelConsumption() > station.cheapCars[j + 1].getFuelConsumption()){
+        CheapCar[] cheapCars = station.getCheapCars();
+        BusinessCar[] businessCars = station.getBusinessCars();
+        ComfortCar[] comfortCars = station.getComfortCars();
+        for(int i = 0; i < station.getNumCheap() - 1; i++){
+            for (int j = 0; j < station.getNumCheap() - i - 1; j++){
+                if(cheapCars[j].getFuelConsumption() > cheapCars[j + 1].getFuelConsumption()){
                     CheapCar temp;
-                    temp = station.cheapCars[j];
-                    station.cheapCars[j] = station.cheapCars[j + 1];
-                    station.cheapCars[j + 1] = temp;
+                    temp = cheapCars[j];
+                    cheapCars[j] = cheapCars[j + 1];
+                    cheapCars[j + 1] = temp;
                 }
             }
         }
-        for(int i = 0; i < station.numComfort; i++){
-            for (int j = 0; j < station.numComfort - i - 1; j++){
-                if(station.comfortCars[j].getFuelConsumption() > station.comfortCars[j + 1].getFuelConsumption()){
+        for(int i = 0; i < station.getNumComfort(); i++){
+            for (int j = 0; j < station.getNumComfort() - i - 1; j++){
+                if(comfortCars[j].getFuelConsumption() > comfortCars[j + 1].getFuelConsumption()){
                     ComfortCar temp;
-                    temp = station.comfortCars[j];
-                    station.comfortCars[j] = station.comfortCars[j + 1];
-                    station.comfortCars[j + 1] = temp;
+                    temp = comfortCars[j];
+                    comfortCars[j] = comfortCars[j + 1];
+                    comfortCars[j + 1] = temp;
                 }
             }
         }
-        for(int i = 0; i < station.numBusiness; i++){
-            for (int j = 0; j < station.numBusiness - i - 1; j++){
-                if(station.businessCars[j].getFuelConsumption() > station.businessCars[j + 1].getFuelConsumption()){
+        for(int i = 0; i < station.getNumBusiness(); i++){
+            for (int j = 0; j < station.getNumBusiness() - i - 1; j++){
+                if(businessCars[j].getFuelConsumption() > businessCars[j + 1].getFuelConsumption()){
                     BusinessCar temp;
-                    temp = station.businessCars[j];
-                    station.businessCars[j] = station.businessCars[j + 1];
-                    station.businessCars[j + 1] = temp;
+                    temp = businessCars[j];
+                    businessCars[j] = businessCars[j + 1];
+                    businessCars[j + 1] = temp;
                 }
             }
         }
@@ -55,60 +62,63 @@ public class Main {
     }
 
     static void outPark(){
-        for(int i = 0; i < station.numCheap; i++){
-            System.out.println(station.cheapCars[i].toString());
+        for(CheapCar car : station.getCheapCars()){
+            System.out.println(car.toString());
         }
         System.out.println();
-        for(int i = 0; i < station.numComfort; i++){
-            System.out.println(station.comfortCars[i].toString());
+        for(ComfortCar car : station.getComfortCars()){
+            System.out.println(car.toString());
         }
         System.out.println();
-        for(int i = 0; i < station.numBusiness; i++){
-            System.out.println(station.businessCars[i].toString());
+        for(BusinessCar car : station.getBusinessCars()){
+            System.out.println(car.toString());
         }
     }
 
     static void findCars(){
+        CheapCar[] cheapCars = station.getCheapCars();
+        BusinessCar[] businessCars = station.getBusinessCars();
+        ComfortCar[] comfortCars = station.getComfortCars();
         int idCheap = -1, idComfort = -1, idBusiness = -1;
         int minSpeed, maxSpeed;
         System.out.println("Введите диапазон скорости(минимальная и максимальная): ");
         minSpeed = in.nextInt();
         maxSpeed = in.nextInt();
-        for(int i = 0; i < station.numCheap; i++){
-            if(station.cheapCars[i].getMaxSpeed() > minSpeed && station.cheapCars[i].getMaxSpeed() < maxSpeed)
+        for(int i = 0; i < station.getNumCheap(); i++){
+            if(cheapCars[i].getMaxSpeed() > minSpeed && cheapCars[i].getMaxSpeed() < maxSpeed)
                 idCheap = i;
             if(idCheap != -1)
                 break;
         }
-        for(int i = 0; i < station.numCheap; i++){
-            if(station.comfortCars[i].getMaxSpeed() > minSpeed && station.comfortCars[i].getMaxSpeed() < maxSpeed)
+        for(int i = 0; i < station.getNumComfort(); i++){
+            if(comfortCars[i].getMaxSpeed() > minSpeed && comfortCars[i].getMaxSpeed() < maxSpeed)
                 idComfort = i;
             if(idComfort != -1)
                 break;
         }
-        for(int i = 0; i < station.numCheap; i++){
-            if(station.businessCars[i].getMaxSpeed() > minSpeed && station.businessCars[i].getMaxSpeed() < maxSpeed)
+        for(int i = 0; i < station.getNumBusiness(); i++){
+            if(businessCars[i].getMaxSpeed() > minSpeed && businessCars[i].getMaxSpeed() < maxSpeed)
                 idBusiness = i;
             if(idBusiness != -1)
                 break;
         }
         if(idCheap != -1){
             System.out.println("Среди дешёвых автомобилей со скоростью в диапозоне от " + minSpeed + " до " + maxSpeed);
-            System.out.println(station.cheapCars[idCheap].toString() + "\n");
+            System.out.println(cheapCars[idCheap].toString() + "\n");
         }
         else {
             System.out.println("Среди дешёвых автомобилей со скоростью в диапозоне от " + minSpeed + " до " + maxSpeed + " нет таких автомобилей\n");
         }
         if(idComfort != -1){
             System.out.println("Среди автомобилей комфортного типа со скоростью в диапозоне от " + minSpeed + " до " + maxSpeed);
-            System.out.println(station.comfortCars[idComfort].toString() + "\n");
+            System.out.println(comfortCars[idComfort].toString() + "\n");
         }
         else {
             System.out.println("Среди автомобилей комфортного типа со скоростью в диапозоне от " + minSpeed + " до " + maxSpeed + " нет таких автомобилей\n");
         }
         if(idBusiness != -1){
             System.out.println("Среди автомобилей бизнес типа со скоростью в диапозоне от " + minSpeed + " до " + maxSpeed);
-            System.out.println(station.businessCars[idBusiness].toString() + "\n");
+            System.out.println(businessCars[idBusiness].toString() + "\n");
         }
         else {
             System.out.println("Среди автомобилей бизнес типа со скоростью в диапозоне от " + minSpeed + " до " + maxSpeed + " нет таких автомобилей\n");
@@ -116,14 +126,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println("Введите количество автомобилей дешёвого типа: ");
-        station.setNumCheap(in.nextInt());
-        System.out.println("Введите количество автомобилей комфортного типа:");
-        station.setNumComfort(in.nextInt());
-        System.out.println("Введите количество автомобилей бизнес типа: ");
-        station.setNumBusiness(in.nextInt());
-        station.createPark();
-
+        write();
+        read();
         boolean flag = true;
         int choice;
         while(flag){

@@ -85,8 +85,8 @@ public class Main {
         int idCheap = -1, idComfort = -1, idBusiness = -1;
         double minFuel, maxFuel;
         System.out.println("Введите диапазон скорости(минимальная и максимальная): ");
-        minFuel = in.nextDouble();
-        maxFuel = in.nextDouble();
+        minFuel = menu.nextDouble();
+        maxFuel = menu.nextDouble();
         for(int i = 0; i < airline.numEconomy; i++){
             if(airline.economyClasses[i].getFuelConsumption() > minFuel && airline.firstClasses[i].getFuelConsumption() < maxFuel)
                 idCheap = i;
@@ -129,18 +129,50 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        int num;
+
         menu = new Scanner(System.in);
         try {
             in = new Scanner(inFile);
         } catch (FileNotFoundException e) {
             System.out.println("Файл для чтения не найден!");
         }
-        System.out.println("Введите количество самолётов эконом класса: ");
-        airline.setNumEconomy(in.nextInt());
-        System.out.println("Введите количество самолётов первого класса:");
-        airline.setNumFirst(in.nextInt());
-        System.out.println("Введите количество самолётов бизнес класса: ");
-        airline.setNumBusiness(in.nextInt());
+        try {
+            num = in.nextInt();
+            if(num < 1)
+                throw new NotPositiveNum("Размерность массива дожна быть не отрицательной");
+            airline.setNumEconomy(num);
+        } catch (InputMismatchException e){
+            System.out.println("Тип вводимого числа должен быть INT");
+        } catch (NoSuchElementException e){
+            System.out.println("Отсутствует значение в файле");
+        } catch (NotPositiveNum e){
+            System.out.println(e.message);
+        }
+        try {
+            num = in.nextInt();
+            if(num < 1)
+                throw new NotPositiveNum("Размерность массива дожна быть не отрицательной");
+            airline.setNumFirst(num);
+        } catch (InputMismatchException e){
+            System.out.println("Тип вводимого числа должен быть INT");
+        } catch (NoSuchElementException e){
+            System.out.println("Отсутствует значение в файле");
+        } catch (NotPositiveNum e){
+            System.out.println(e.message);
+        }
+        try {
+            num = in.nextInt();
+            if(num < 1)
+                throw new NotPositiveNum("Размерность массива дожна быть не отрицательной");
+            airline.setNumBusiness(num);
+        } catch (InputMismatchException e){
+            System.out.println("Тип вводимого числа должен быть INT");
+        } catch (NoSuchElementException e){
+            System.out.println("Отсутствует значение в файле");
+        } catch (NotPositiveNum e){
+            System.out.println(e.message);
+        }
         airline.CreateAirline();
 
         boolean flag = true;
