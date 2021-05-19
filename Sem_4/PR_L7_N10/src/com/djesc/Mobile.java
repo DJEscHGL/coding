@@ -1,8 +1,11 @@
 package com.djesc;
 
+import Interfaces.CountPrice;
+
 import java.io.Serializable;
 
 public class Mobile implements Serializable {
+    //Статический вложенный класс
     public static class Settings implements Serializable{
         int ram, rom;
         double resolution, frontCamera, backCamera;
@@ -61,21 +64,30 @@ public class Mobile implements Serializable {
                     '}';
         }
     }
-    double price;
+    //Внутренний класс
+    public class Design{
+        String color;
+        Design(){
+            super();
+        }
+    }
+    double cost;
     String model;
-    static Settings settings;
+    Design design;
+    public Settings settings;
     Mobile(String name){
         this.model = name;
         settings = new Settings();
+        design = new Design();
     }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
+    //Анонимный класс
+    CountPrice price = new CountPrice() {
+        @Override
+        public void count() {
+            cost = settings.ram * 0.5 + settings.rom * 0.5 + settings.backCamera * 0.7 + settings.frontCamera * 0.7+
+                    + settings.resolution * 100;
+        }
+    };
 
     public String getModel() {
         return model;
@@ -85,20 +97,13 @@ public class Mobile implements Serializable {
         this.model = model;
     }
 
-    public Settings getSettings() {
-        return settings;
-    }
-
-    public void setSettings(Settings settings) {
-        Mobile.settings = settings;
-    }
-
     @Override
     public String toString() {
         return "Mobile{" +
-                "model=" + model +
-                ", price='" + price + '\'' +
+                "model='" + model + '\'' +
+                ", color='" + design.color + '\'' +
                 ", " + settings +
+                ", price=" + cost +
                 '}';
     }
 }

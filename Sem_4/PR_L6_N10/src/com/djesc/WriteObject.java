@@ -5,9 +5,9 @@ import java.io.*;
 public class WriteObject {
     static TaxiStation station = new TaxiStation();
     public static void write() {
-        station.setNumCheap(3);
-        station.setNumComfort(4);
-        station.setNumBusiness(5);
+        station.setNumCheap(5);
+        station.setNumComfort(6);
+        station.setNumBusiness(7);
         station.createPark();
         try {
             FileOutputStream outputStream = new FileOutputStream("./res/taxi.bin");
