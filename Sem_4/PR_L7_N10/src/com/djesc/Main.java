@@ -1,6 +1,5 @@
 package com.djesc;
 
-import com.djesc.Mobile.Settings;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,7 +8,6 @@ import java.util.Scanner;
 
 public class Main {
     static Mobile[] phones;
-    static Settings settings = new Settings();
     static String inPath = "./res/in.txt";
     static File inFile = new File(inPath);
     static Scanner in;
