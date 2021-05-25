@@ -35,7 +35,7 @@ end_y = 125
 root = tk.Tk()
 root.resizable(width=False, height=False)
 root.geometry('875x240')
-root.title('Движение шара после удара с учётом сил трения')
+root.title('Моделирование движения шара после удара по негладкой горизонтальной поверхности')
 
 canvas = tk.Canvas(root, bg="white", width=470, height=235)
 output = tk.Canvas(root, bg="lightgrey", width=400, height=90)
@@ -90,18 +90,19 @@ def do_one_frame(self):
     output.itemconfig(coordinate, text=str("x = ") + str(x))
     output.itemconfig(omega, text=str("w = ") + str(w))
     self.delete(line)
+
+    center_x = self.coords(circle)[0] + 25
+    center_y = 125
     self.move(circle, deltaX, 0)
     angle_in_radians = w * t * math.pi / 180
-    center_x = self.coords(circle)[0] + 25
-    # end_x = center_x + line_length * math.cos(angle_in_radians)
-    # end_y = center_y + line_length * math.sin(angle_in_radians)
+
     end_xx = end_x
-    end_x = self.coords(circle)[0] + 25 + (end_x - self.coords(circle)[0] + 25) * math.cos(angle_in_radians)
-    - (end_y - 125) * math.sin(angle_in_radians)
-    end_y = 125 + (end_y - 125) * math.cos(angle_in_radians)
-    + (end_xx - self.coords(circle)[0] + 25) * math.sin(angle_in_radians)
-    line = canvas.create_line(self.coords(circle)[0] + 25, 125,  end_x, end_y)
-    camX = self.coords(circle)[0]
+    end_x = center_x + (end_x - center_x) * math.cos(angle_in_radians) - (end_y - center_y) * math.sin(angle_in_radians)
+    end_y = center_y + (end_y - center_y) * math.cos(angle_in_radians) + (end_xx - center_x) * math.sin(angle_in_radians)
+    end_x += deltaX
+
+    line = canvas.create_line(center_x + deltaX, 125,  end_x, end_y)
+    camX = center_x
     t += deltaT
     if v > 0:
         self.after(25, do_one_frame, canvas)
@@ -142,7 +143,7 @@ def getvalue():
 
 
 def reset(self):
-    global v, V0, t, allX, deltaX, deltaCamX, camX, x, line, circle, temp, deltaT, w
+    global v, V0, t, allX, deltaX, deltaCamX, camX, x, line, circle, temp, deltaT, w, center_x, center_y, end_x, end_y
     self.delete(circle)
     self.delete(line)
     circle = canvas.create_oval(100, 100, 150, 150, fill="lightblue")
@@ -157,6 +158,10 @@ def reset(self):
     deltaCamX = 470
     deltaX = 0
     w = 0
+    center_x = 0
+    center_y = 125
+    end_x = 150
+    end_y = 125
 
 
 canvas.bind_all("<MouseWheel>", _on_mousewheel)
