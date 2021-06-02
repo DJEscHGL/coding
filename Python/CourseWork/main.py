@@ -1,10 +1,10 @@
 import math
 import tkinter as tk
 
-R = 0.25  # Радиус шара
+R = 0.05  # Радиус шара
 V0 = 5.0  # Начальная скорость
-K1 = 0.2  # Коэффициент трения скольжения
-K2 = 0.002  # Коэффициент трения качения
+K1 = 0.17  # Коэффициент трения скольжения
+K2 = 0.00051  # Коэффициент трения качения
 G = 9.81  # Гравитационная постоянная
 T1 = (2 * V0) / (7 * K1 * G)  # Время движения с коэффициентом скольжения
 X1 = (V0 * T1) - ((K1 * G * T1 * T1) / 2)  # Перемещение за время T1
@@ -66,7 +66,10 @@ omega = output.create_text(100, 70, justify='left')
 circle = canvas.create_oval(100, 100, 150, 150, fill="lightblue")
 line = canvas.create_line(125, 125, 150, 125)
 for i in range(5, 9000, 10):
-    canvas.create_line(i, 150, i, 170)
+    if i == 125:
+        canvas.create_line(i, 150, i, 170, fill="red")
+    else:
+        canvas.create_line(i, 150, i, 170)
 
 
 def do_one_frame(self):  # функция моделирования движения при нажатии кнопки Запуск
@@ -97,14 +100,12 @@ def do_one_frame(self):  # функция моделирования движе�
     center_y = 125
     self.move(circle, deltaX * 10, 0)
     angle_in_radians = w * t * math.pi / 180
-
     end_xx = end_x
     end_x = center_x + (end_x - center_x) * math.cos(angle_in_radians) - (end_y - center_y) * math.sin(angle_in_radians)
     end_y = center_y + (end_y - center_y) * math.cos(angle_in_radians) + (end_xx - center_x) * math.sin(
         angle_in_radians)
     end_x += (deltaX * 10)
-
-    line = canvas.create_line(center_x + deltaX * 10, 125, end_x, end_y)
+    line = canvas.create_line(center_x + (deltaX * 10), 125, end_x, end_y)
     camX = center_x
     t += deltaT
     if v > 0:
@@ -184,10 +185,10 @@ def reset(self):  # функция для кнопки Сброс
 
 canvas.bind_all("<MouseWheel>", _on_mousewheel)
 # Расположение кнопок и label
-tk.Label(root, text='Радиус шара').place(x=0, y=0)
-tk.Label(root, text='Начальная скорость').place(x=0, y=25)
+tk.Label(root, text='Радиус шара, м').place(x=0, y=0)
+tk.Label(root, text='Начальная скорость, м/с').place(x=0, y=25)
 tk.Label(root, text='Коэф. трения скольжения').place(x=0, y=50)
-tk.Label(root, text='Коэф. трения качения').place(x=0, y=75)
+tk.Label(root, text='Коэф. трения качения, м').place(x=0, y=75)
 tk.Button(root, text='Изменить значения', command=getvalue).place(x=0, y=110)
 tk.Button(root, text='Запуск', command=lambda: do_one_frame(canvas)).place(x=151, y=110)
 tk.Button(root, text='Сброс', command=lambda: reset(canvas)).place(x=209, y=110)

@@ -1,0 +1,12 @@
+Lollipop{numOfSugar=41, weight=28.7}
+Lollipop{numOfSugar=44, weight=30.799999999999997}
+Lollipop{numOfSugar=31, weight=21.7}
+Chocolate{numOfSugar=16, weight=9.6}
+Chocolate{numOfSugar=17, weight=10.2}
+Chocolate{numOfSugar=23, weight=13.799999999999999}
+Chocolate{numOfSugar=16, weight=9.6}
+Sweet{numOfSugar=3, weight=1.5}
+Sweet{numOfSugar=9, weight=4.5}
+Sweet{numOfSugar=10, weight=5.0}
+Sweet{numOfSugar=9, weight=4.5}
+Sweet{numOfSugar=3, weight=1.5}
