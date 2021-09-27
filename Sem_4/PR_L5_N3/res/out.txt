@@ -1,0 +1,12 @@
+Teapot{power=39, isActive=false}
+Teapot{power=20, isActive=false}
+Teapot{power=47, isActive=false}
+Teapot{power=35, isActive=false}
+Teapot{power=27, isActive=false}
+Mixer{power=621, isActive=false}
+Mixer{power=628, isActive=false}
+Mixer{power=947, isActive=false}
+Multicooker{power=259, isActive=false}
+Multicooker{power=403, isActive=false}
+Multicooker{power=379, isActive=false}
+Multicooker{power=393, isActive=false}
