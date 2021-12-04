@@ -826,4 +826,20 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
+# SolidWorks
+.CWR
+.DSP
+.ELF
+.GEN
+.IDA
+.LCD
+.LDS
+.LOG
+.MAS
+.MFC
+.OUT
+.STE
+.STG
+.cwr
+
 # End of https://www.toptal.com/developers/gitignore/api/java,kotlin,c++,intellij,pycharm,qt,qtcreator,visualstudio,visualstudiocode,python
