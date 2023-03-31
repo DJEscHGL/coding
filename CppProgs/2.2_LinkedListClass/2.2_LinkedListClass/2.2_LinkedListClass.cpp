@@ -80,10 +80,11 @@ public:
 		}
 		return -1;
 	}
-	//Method for deleting list
+	//Method for deleting list(???)
 	void deleteList() {
 		node* temp = head;
 		while (temp != NULL) {
+			delete next;
 			head = temp->next;
 		}
 	}
